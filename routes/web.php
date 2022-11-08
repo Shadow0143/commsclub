@@ -24,3 +24,8 @@ Route::get('/events', [App\Http\Controllers\WelcomeController::class, 'events'])
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/post-banner', [App\Http\Controllers\FrontendController::class, 'postBanner'])->name('postBanner');
+Route::post('/post-services', [App\Http\Controllers\FrontendController::class, 'postServices'])->name('postServices');
+Route::post('/media-outlet', [App\Http\Controllers\FrontendController::class, 'mediaOutlet'])->name('mediaOutlet');
+Route::post('/testimonial', [App\Http\Controllers\FrontendController::class, 'testimonial'])->name('testimonial');
+Route::post('/post-news', [App\Http\Controllers\FrontendController::class, 'news'])->name('news');

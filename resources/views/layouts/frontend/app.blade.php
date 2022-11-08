@@ -14,8 +14,12 @@
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet">
 
+    @yield('css')
+
 <body>
 
+    @include('sweetalert::alert')
+    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
     @include('layouts.frontend.header')
     @yield('content')
     @include('layouts.frontend.footer')
