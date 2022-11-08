@@ -1,0 +1,331 @@
+@charset "utf-8";
+@media only screen and (max-width:1200px) {
+    .container {
+        max-width: 98%
+    }
+    .menubox ul li a {
+        font-size: 14px;
+    }
+    .menubox ul li {
+        padding: 0 4px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .banner_sec55.innerbanner456 {
+        padding: 120px 0;
+        background-size: cover;
+    }
+    .toggle458 {
+        display: block;
+    }
+    .menubox.desk {
+        display: none;
+    }
+    .toggle458 {
+        position: absolute;
+        right: 25px;
+        top: 60px;
+        color: #fff;
+        font-size: 33px;
+    }
+    .hdtprt25 {
+        display: none;
+    }
+    .logo img {
+        height: 40px;
+    }
+    .bannerinfo h1 {
+        font-size: 55px;
+        line-height: 55px;
+    }
+    .bannerinfo {
+        text-align: center;
+    }
+    .banner_sec55 {
+        padding-top: 30px;
+    }
+    .maintitle44 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .brandsec45 {
+        display: block;
+    }
+    .brandleft558 {
+        width: 100%;
+    }
+    .brandright66 {
+        width: 100%;
+    }
+    .brandright66 li img {
+        height: 30px;
+    }
+    .strysection h2 {
+        font-weight: 900;
+        font-size: 32px;
+    }
+    .storyleft15 {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .storysec45 {
+        display: block;
+    }
+    .storyright15 {
+        width: 100%;
+        padding: 20px;
+    }
+    .paddy {
+        padding: 30px 0;
+    }
+    .datacont {
+        display: block;
+    }
+    .dataleft45 {
+        width: 100%;
+        padding: 20px;
+    }
+    .dataright45 {
+        width: 100%;
+    }
+    .worksection45 {
+        display: block;
+        width: 100%;
+    }
+    .workleft45 {
+        width: 100%;
+        background: #241832;
+        padding: 40px;
+    }
+    .workright45 {
+        width: 100%;
+        background: #11041f;
+        padding: 40px;
+    }
+    .banner_sec55.innerbanner456 {
+        padding: 70px 0;
+        background-size: cover;
+    }
+    .jobrow78 .btndflt58 {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+    .jobinfo54 h2 {
+        font-size: 18px;
+    }
+    .jobinfo54 small {
+        font-size: 14px;
+    }
+    .jdt5 li {
+        font-size: 14px;
+        padding-right: 16px;
+    }
+    .jossearh_sec455 {
+        display: block;
+    }
+    .jossearh_sec455 label {
+        margin-bottom: 10px;
+    }
+    .jbsrch45 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .breadcrumb55 li {
+        font-size: 15px;
+    }
+    .breadcrumb55 li::after {
+        top: 2px;
+        left: auto;
+        font-size: 20px;
+    }
+    .banner_sec55.innerbanner456 h1 {
+        font-size: 35px;
+    }
+    .workleft45 h2 {
+        font-size: 45px;
+        text-align: center;
+    }
+    br {
+        display: none;
+    }
+    .aboutuscont45 {
+        padding: 30px;
+    }
+    .servbox11 {
+        margin-bottom: 20px;
+    }
+    .servinfo66 {
+        position: static;
+    }
+    .paddy {
+        padding: 30px 0;
+    }
+    .brandright66 {
+        padding: 40px;
+    }
+    .testbox568 {
+        padding-right: 20px;
+    }
+    .blogsec45 .col-lg-4 {
+        margin-bottom: 30px;
+    }
+    .footer_blog45 {
+        padding-bottom: 20px;
+    }
+    .contact_sec55 span {
+        padding: 0 20px;
+        font-size: 18px;
+    }
+    .brandright66 ul {
+        text-align: center;
+    }
+    .brandleft558 h2 {
+        text-align: center;
+        font-size: 40px;
+    }
+    .eveinfo45 {
+        display: block;
+        padding: 10px;
+    }
+    .eve_right458 h3 {
+        font-size: 16px;
+    }
+    .datebox45 {
+        text-align: left;
+        width: auto;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+    }
+    .eve_right458 {
+        width: 100%;
+        padding-left: 0;
+    }
+    .day45 {
+        margin: 0;
+        padding-right: 10px;
+    }
+    .eve_tlist88 li {
+        font-size: 14px;
+    }
+    .jobrow78 figure img {
+        width: 50px;
+    }
+    .jobinfo54 span {
+        margin: 0;
+    }
+    .jobinfo54 h2 {
+        font-size: 16px;
+        margin: 0;
+    }
+    .jobinfo54 small {
+        margin: 0;
+    }
+    .jobrow78 .btndflt58 {
+        white-space: nowrap;
+    }
+    .jbsrch45 input {
+        width: calc(100% - 220px);
+    }
+    .login_sectin456 {
+        padding: 30px 20px;
+    }
+    .logheader45 {
+        margin-bottom: 50px;
+    }
+    .logheader45 .logo {
+        margin-right: 40px;
+    }
+    .logmenu45 li a {
+        font-size: 15px;
+    }
+    .alredy456 {
+        font-size: 15px;
+    }
+    .form-control label span {
+        display: inline-block;
+        font-size: 14px;
+    }
+    .form-control label {
+        position: absolute;
+        top: 16px;
+        left: 20px;
+    }
+    .inputfield56.dbl {
+        display: block;
+    }
+    .inputfield56.dbl .form-control {
+        margin-right: 0;
+        margin: 0 0 30px;
+    }
+}
+
+@media only screen and (max-width: 585px) {
+    .clean01 {
+        font-size: 0;
+    }
+    .jossearh_sec455 {
+        margin-bottom: 20px;
+    }
+    .clean01 i {
+        margin-right: 5px;
+        font-size: 20px;
+    }
+    .jbsrch45 button {
+        font-size: 0;
+    }
+    .jbsrch45 button i {
+        font-size: 18px;
+    }
+    .jbsrch45 input {
+        width: calc(100% - 70px);
+    }
+    .jbsrch45 {
+        padding: 0 5px;
+    }
+    .bannerinfo h1 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .banner_sec55 {
+        padding-top: 30px;
+        padding-bottom: 120px;
+    }
+    .hdtopouter {
+        display: none;
+    }
+    .toggle458 {
+        top: 11px;
+    }
+    .aboutuscont45 {
+        background: #fff;
+        margin-top: -40px;
+    }
+    .banner_slider .slick-arrow {
+        top: 90%;
+    }
+    .jobrow78 {
+        padding: 12px;
+        display: block;
+        justify-content: space-between;
+        box-shadow: 0 0 5px #efefef;
+        align-items: center;
+    }
+    .jobinfo54 {
+        padding-left: 0;
+        margin: 0 0 15px;
+    }
+    .jobleft458 figure {
+        margin-bottom: 12px;
+    }
+    .jobleft458 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 479px) {}
