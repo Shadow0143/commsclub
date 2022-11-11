@@ -17,6 +17,7 @@
 @endsection
 
 @section('content')
+
 <section class="banner_sec55">
     @guest
     @else
@@ -37,8 +38,10 @@
                 @guest
                 @else
                 @if(Auth::user()->role=='0')
-                <a href="javaScript:void(0);" title="Edit" class="edit-banner" data-id="{{$val->id}}">Edit</a>
-                <a href="javaScript:void(0);" title="Delete" class="delete_banner" data-id="{{$val->id}}">Delete</a>
+                <a href="javaScript:void(0);" title="Edit" class="edit-banner" data-id="{{$val->id}}"><i
+                        class='fa fa-edit'></i></a>
+                <a href="javaScript:void(0);" title="Delete" class="delete_banner" data-id="{{$val->id}}"><i
+                        class='fa fa-trash'></i></a>
                 @endif
                 @endguest
 
@@ -113,9 +116,9 @@
                                     @else
                                     @if(Auth::user()->role=='0')
                                     <a href="javaScript:void(0);" title="Edit" class="edit-services"
-                                        data-id="{{$val2->id}}">Edit</a>
+                                        data-id="{{$val2->id}}"><i class='fa fa-edit'></i></a>
                                     <a href="javaScript:void(0);" title="Delete" class="delete_services"
-                                        data-id="{{$val2->id}}">Delete</a>
+                                        data-id="{{$val2->id}}"><i class='fa fa-trash'></i></a>
 
                                     @endif
                                     @endguest
@@ -193,9 +196,9 @@
                             @else
                             @if(Auth::user()->role=='0')
                             <a href="javaScript:void(0);" title="Edit" class="edit-testimonial"
-                                data-id="{{$val4->id}}">Edit</a>
+                                data-id="{{$val4->id}}"><i class='fa fa-edit'></i></a>
                             <a href="javaScript:void(0);" title="Delete" class="delete_testimonial"
-                                data-id="{{$val4->id}}">Delete</a>
+                                data-id="{{$val4->id}}"><i class='fa fa-trash'></i></a>
                             @endif
                             @endguest
 
@@ -304,8 +307,10 @@
                     @guest
                     @else
                     @if(Auth::user()->role=='0')
-                    <a href="javaScript:void(0);" title="Edit" class="edit-news" data-id="{{$val5->id}}">Edit</a>
-                    <a href="javaScript:void(0);" title="Delete" class="delete_news" data-id="{{$val5->id}}">Delete</a>
+                    <a href="javaScript:void(0);" title="Edit" class="edit-news" data-id="{{$val5->id}}"><i
+                            class='fa fa-edit'></i></a>
+                    <a href="javaScript:void(0);" title="Delete" class="delete_news" data-id="{{$val5->id}}"><i
+                            class='fa fa-trash'></i></a>
                     @endif
                     @endguest
                     <div class="date45">

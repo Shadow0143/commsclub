@@ -70,12 +70,13 @@
                     <ul>
                         <li class=" @if(Route::current()->getName()=='welcome') active @endif"><a
                                 href="{{route('welcome')}}">Home </a></li>
-                        <li><a href="#">Resources</a></li>
+                        <li class="@if(Route::current()->getName()=='blogs') active @endif"><a
+                                href="{{route('blogs')}}">Resources</a></li>
                         <li class=" @if(Route::current()->getName()=='events') active @endif"><a
                                 href="{{route('events')}}">Events</a></li>
                         <li><a href="#">Jobs</a></li>
                         <li><a href="#">Expert Database</a></li>
-                        <li><a href="#">Join Commsclub</a></li>
+                        <li data-toggle="modal" data-target="#joinmodal"><a href="#">Join Commsclub</a></li>
                     </ul>
                 </div>
 
@@ -111,14 +112,15 @@
                         <ul>
                             <li class=" @if(Route::current()->getName()=='welcome') active @endif"><a
                                     href="{{route('welcome')}}">Home</a></li>
-                            <li><a href="#">Resources</a></li>
+                            <li class="@if(Route::current()->getName()=='blog') active @endif"><a
+                                    href="{{route('blogs')}}">Resources</a></li>
                             <li class=" @if(Route::current()->getName()=='events') active @endif"><a
                                     href="{{route('events')}}">Events</a></li>
                             <li><a href="#">Jobs</a></li>
                             <li><a href="#">Expert Database</a></li>
                             <li><a href="#">Faq</a></li>
                             <li><a href="#">Login</a></li>
-                            <li><a href="#">Join Commsclub</a></li>
+                            <li data-toggle="modal" data-target="#joinmodal"><a href="#">Join Commsclub</a></li>
                         </ul>
                     </div>
 
@@ -132,7 +134,73 @@
     <!-- modal -->
     <!-- Mobile menu -->
 
+    <!-- join pop up -->
+    <div class="modal fade" id="joinmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered popcontainer" role="document">
+            <div class="modal-content popups45">
+                <div class="modal-header">
+                    <div class="logo">
+                        <a href="{{route('welcome')}}"><img src="{{asset('assets/images/logo.png')}}" alt="logo"></a>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
+                    <div class="pophead99">
+                        <h2>JOIN COMMSCLUB</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus in urna at
+                            lobortis. Suspendisse quis mauris maxim.
+                        </p>
+                        <span>Lorem ipsum dolor sit amet</span>
+                    </div>
+
+                    <div class="popbody458">
+
+                        <div class="fieldrow">
+                            <div class="inputfield55">
+                                <label>email id</label>
+                                <input type="text" name="">
+                                <!-- <span class="error55"></span> -->
+                            </div>
+                        </div>
+
+                        <div class="fieldrow">
+                            <div class="inputfield55">
+                                <label>password</label>
+                                <input type="password" name="">
+                                <!-- <span class="error55"></span> -->
+                            </div>
+                        </div>
+
+                        <div class="termcheck455">
+                            <label class="checkcontainer78">
+                                <input type="checkbox">I confirm that i’ve read and agree to Privacy Policy
+                                <span class="checkmark"></span>
+
+
+                            </label>
+                        </div>
+
+                        <div class="btnbox55">
+                            <a href="#" class="btndflt58" tabindex="0">login</a>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- join pop up -->
 
 
 </header>

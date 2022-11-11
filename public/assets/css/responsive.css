@@ -263,9 +263,28 @@
         margin-right: 0;
         margin: 0 0 30px;
     }
+    .bloginfo899 h2 {
+        font-size: 22px;
+    }
+    .blgtop45 li {
+        font-size: 14px;
+    }
+    .post_sec456 ul li {
+        font-size: 16px;
+        padding: 5px 0;
+    }
+    .post_sec456.arch ul li a {
+        font-size: 16px;
+    }
+    .blgsrbox78 {
+        padding: 15px;
+    }
 }
 
 @media only screen and (max-width: 585px) {
+    .bloginfo899 {
+        padding: 15px;
+    }
     .clean01 {
         font-size: 0;
     }

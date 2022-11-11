@@ -3,6 +3,20 @@
 @section('title')
 <title>Events</title>
 @endsection
+@section('css')
+<style>
+    .eventAddBtn {
+        height: 60px;
+        width: 60px;
+        border-radius: 50px;
+        position: absolute;
+        margin: 10px;
+        background-color: #10104bc9;
+        color: white;
+        box-shadow: 0px 1px 30px blue
+    }
+</style>
+@endsection
 
 @section('content')
 <section class="banner_sec55 innerbanner456">
@@ -19,148 +33,81 @@
         </ul>
     </div>
 </section>
+@guest
+@else
+@if(Auth::user()->role=='0')
+<a href="{{route('createEvents')}}"> <button class="eventAddBtn"> + </button> </>
+    @endif
+    @endguest
 
+    <section class="event_section paddy">
+        <div class="container">
+            <div class="row">
+                @foreach ($event as $key=>$item)
+                <div class="col-lg-4 col-md-4 col-sm-6 evehndlr45" id="event{{$item->id}}">
+                    @guest
+                    @else
+                    @if(Auth::user()->role=='0')
+                    <a href="{{route('editEvents',['id'=>$item->id])}}" title="Edit"><i class='fa fa-edit'></i></a>
+                    <a href="javaScript:void(0);" title="Delete" class="delete_event" data-id="{{$item->id}}"><i
+                            class='fa fa-trash'></i></a>
+                    @endif
+                    @endguest
+                    <div class="event_block45">
+                        <figure><img src="{{asset('events')}}/{{$item->image}}" alt="event_img"></figure>
+                        <div class="eveinfo45">
+                            <div class="datebox45">
+                                <span class="day45">{{date('D',strtotime($item->created_at))}}</span>
+                                <span class="date55">{{date('m',strtotime($item->created_at))}}</span>
+                            </div>
+                            <div class="eve_right458">
+                                <h3>{{ucfirst($item->event_subject)}}</h3>
+                                <ul class="eve_tlist88">
+                                    <li><i class="fa fa-calendar"></i>{{date('M d, Y',strtotime($item->start_date))}} -
+                                        {{date('M d, Y',strtotime($item->end_date))}}</li>
+                                    <li><i class="fa fa-clock-o"></i> {{date('H:i A',strtotime($item->start_time))}} -
+                                        {{date('H:i A',strtotime($item->end_time))}}</li>
+                                    <li><i class="fa fa-map-marker"></i> {!! $item->address !!}</li>
+                                </ul>
+                            </div>
+                        </div>
 
-<section class="event_section paddy">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6 evehndlr45">
-                <div class="event_block45">
-                    <figure><img src="{{asset('assets/images/event/eventpic01.jpg')}}" alt="event_img"></figure>
-                    <div class="eveinfo45">
-                        <div class="datebox45">
-                            <span class="day45">Sat</span>
-                            <span class="date55">01</span>
-                        </div>
-                        <div class="eve_right458">
-                            <h3>Fashion Carnival 2022</h3>
-                            <ul class="eve_tlist88">
-                                <li><i class="fa fa-calendar"></i> January 1, 2022 - December 31, 2022</li>
-                                <li><i class="fa fa-clock-o"></i> 10:00 AM - 8:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i> Indonesian Embassy, Road No 2432</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 evehndlr45">
-                <div class="event_block45">
-                    <figure><img src="{{asset('assets/images/event/eventpic02.jpg')}}" alt="event_img"></figure>
-                    <div class="eveinfo45">
-                        <div class="datebox45">
-                            <span class="day45">Sat</span>
-                            <span class="date55">01</span>
-                        </div>
-
-                        <div class="eve_right458">
-                            <h3>Fashion Carnival 2022</h3>
-                            <ul class="eve_tlist88">
-                                <li><i class="fa fa-calendar"></i> January 1, 2022 - December 31, 2022</li>
-                                <li><i class="fa fa-clock-o"></i> 10:00 AM - 8:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i> Indonesian Embassy, Road No 2432</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
+                @endforeach
+
             </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-6 evehndlr45">
-                <div class="event_block45">
-                    <figure><img src="{{asset('assets/images/event/eventpic03.jpg')}}" alt="event_img"></figure>
-                    <div class="eveinfo45">
-                        <div class="datebox45">
-                            <span class="day45">Sat</span>
-                            <span class="date55">01</span>
-                        </div>
-                        <div class="eve_right458">
-                            <h3>Fashion Carnival 2022</h3>
-                            <ul class="eve_tlist88">
-                                <li><i class="fa fa-calendar"></i> January 1, 2022 - December 31, 2022</li>
-                                <li><i class="fa fa-clock-o"></i> 10:00 AM - 8:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i> Indonesian Embassy, Road No 2432</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-6 evehndlr45">
-                <div class="event_block45">
-                    <figure><img src="{{asset('assets/images/event/eventpic04.jpg')}}" alt="event_img"></figure>
-                    <div class="eveinfo45">
-                        <div class="datebox45">
-                            <span class="day45">Sat</span>
-                            <span class="date55">01</span>
-                        </div>
-                        <div class="eve_right458">
-                            <h3>Fashion Carnival 2022</h3>
-                            <ul class="eve_tlist88">
-                                <li><i class="fa fa-calendar"></i> January 1, 2022 - December 31, 2022</li>
-                                <li><i class="fa fa-clock-o"></i> 10:00 AM - 8:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i> Indonesian Embassy, Road No 2432</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-6 evehndlr45">
-                <div class="event_block45">
-                    <figure><img src="{{asset('assets/images/event/eventpic01.jpg')}}" alt="event_img"></figure>
-                    <div class="eveinfo45">
-                        <div class="datebox45">
-                            <span class="day45">Sat</span>
-                            <span class="date55">01</span>
-                        </div>
-
-                        <div class="eve_right458">
-                            <h3>Fashion Carnival 2022</h3>
-                            <ul class="eve_tlist88">
-                                <li><i class="fa fa-calendar"></i> January 1, 2022 - December 31, 2022</li>
-                                <li><i class="fa fa-clock-o"></i> 10:00 AM - 8:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i> Indonesian Embassy, Road No 2432</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-6 evehndlr45">
-                <div class="event_block45">
-                    <figure><img src="{{asset('assets/images/event/eventpic02.jpg')}}" alt="event_img"></figure>
-                    <div class="eveinfo45">
-                        <div class="datebox45">
-                            <span class="day45">Sat</span>
-                            <span class="date55">01</span>
-                        </div>
-
-                        <div class="eve_right458">
-                            <h3>Fashion Carnival 2022</h3>
-                            <ul class="eve_tlist88">
-                                <li><i class="fa fa-calendar"></i> January 1, 2022 - December 31, 2022</li>
-                                <li><i class="fa fa-clock-o"></i> 10:00 AM - 8:00 PM</li>
-                                <li><i class="fa fa-map-marker"></i> Indonesian Embassy, Road No 2432</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-
         </div>
-    </div>
 
-</section>
+    </section>
 
+    @endsection
 
-@endsection
+    @section('js')
 
-@section('js')
-
-@endsection
+    <script>
+        $(document).on('click', '.delete_event', function(e) {
+      e.preventDefault();
+      var id = $(this).data('id');
+        swal({
+            title: 'Are you sure?',
+            text: "You won't delete this event!",
+            icon: 'warning',
+            buttons: true,
+            buttonsStyling: false,
+            reverseButtons: true
+        }).then((confirm) => {
+            if (confirm) {
+                $.ajax({
+                    type: "GET",
+                    url: "{{route('deleteEvents')}}",
+                    data: { id: id },
+                    success: function(data) {
+                        $('#event'+id).hide();
+                    }
+                });
+            }
+        });
+    });
+    </script>
+    @endsection

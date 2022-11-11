@@ -4,6 +4,8 @@
 /public/services
 /public/companylogos
 /public/testimonials
+/public/blogs
+/public/events
 /public/news
 /storage/*.key
 /vendor

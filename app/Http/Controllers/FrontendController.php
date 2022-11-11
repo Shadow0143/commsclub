@@ -10,7 +10,7 @@ use App\Models\Services;
 use App\Models\CompanyLogos;
 use App\Models\Testimonial;
 use App\Models\News;
-use Alert;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class FrontendController extends Controller
 {

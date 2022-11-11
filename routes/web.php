@@ -3,22 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
-Route::get('/events', [App\Http\Controllers\WelcomeController::class, 'events'])->name('events');
+Route::get('/event', [App\Http\Controllers\WelcomeController::class, 'events'])->name('events');
+Route::get('/blog', [App\Http\Controllers\WelcomeController::class, 'blogs'])->name('blogs');
+Route::get('/search-blogs', [App\Http\Controllers\WelcomeController::class, 'searchBlogs'])->name('searchBlogs');
+
 
 
 Auth::routes();
@@ -40,3 +32,13 @@ Route::get('/delete-service', [App\Http\Controllers\FrontendController::class, '
 Route::get('/delete-companylogo', [App\Http\Controllers\FrontendController::class, 'deleteCompanyLogo'])->name('deleteCompanyLogo');
 Route::get('/delete-testimonial', [App\Http\Controllers\FrontendController::class, 'deleteTestimonial'])->name('deleteTestimonial');
 Route::get('/delete-news', [App\Http\Controllers\FrontendController::class, 'deleteNews'])->name('deleteNews');
+
+Route::get('/create-events', [App\Http\Controllers\EventController::class, 'createEvents'])->name('createEvents');
+Route::post('/post-events', [App\Http\Controllers\EventController::class, 'postEvents'])->name('postEvents');
+Route::get('/edit-events/{id}', [App\Http\Controllers\EventController::class, 'editEvents'])->name('editEvents');
+Route::get('/delete-events', [App\Http\Controllers\EventController::class, 'deleteEvents'])->name('deleteEvents');
+
+Route::get('/create-blogs', [App\Http\Controllers\BlogController::class, 'createBlogs'])->name('createBlogs');
+Route::post('/post-blogs', [App\Http\Controllers\BlogController::class, 'postBlogs'])->name('postBlogs');
+Route::get('/edit-blogs/{id}', [App\Http\Controllers\BlogController::class, 'editBlogs'])->name('editBlogs');
+Route::get('/delete-blogs', [App\Http\Controllers\BlogController::class, 'deleteBlogs'])->name('deleteBlogs');
