@@ -74,7 +74,8 @@
                                 href="{{route('blogs')}}">Resources</a></li>
                         <li class=" @if(Route::current()->getName()=='events') active @endif"><a
                                 href="{{route('events')}}">Events</a></li>
-                        <li><a href="#">Jobs</a></li>
+                        <li class=" @if(Route::current()->getName()=='jobs') active @endif"><a
+                                href="{{route('jobs')}}">Jobs</a></li>
                         <li><a href="#">Expert Database</a></li>
                         <li data-toggle="modal" data-target="#joinmodal"><a href="#">Join Commsclub</a></li>
                     </ul>
@@ -116,7 +117,8 @@
                                     href="{{route('blogs')}}">Resources</a></li>
                             <li class=" @if(Route::current()->getName()=='events') active @endif"><a
                                     href="{{route('events')}}">Events</a></li>
-                            <li><a href="#">Jobs</a></li>
+                            <li class=" @if(Route::current()->getName()=='jobs') active @endif"><a
+                                    href="{{route('jobs')}}">Jobs</a></li>
                             <li><a href="#">Expert Database</a></li>
                             <li><a href="#">Faq</a></li>
                             <li><a href="#">Login</a></li>

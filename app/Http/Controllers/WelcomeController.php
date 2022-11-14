@@ -13,6 +13,7 @@ use App\Models\Testimonial;
 use App\Models\News;
 use App\Models\Events;
 use App\Models\Blogs;
+use App\Models\Jobs;
 
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -59,5 +60,18 @@ class WelcomeController extends Controller
         }
 
         return view('resources.ajax_blogs')->with('blogs', $blogs);
+    }
+
+
+    public function jobs()
+    {
+        $jobs = Jobs::orderBy('id', 'desc')->get();
+        return view('jobs.job')->with('jobs', $jobs);
+    }
+
+    public function searchJobs(Request $request)
+    {
+        $jobs = Jobs::where('job_title', 'like', '%' . $request->keyword . '%')->get();
+        return view('jobs.ajax_jobs')->with('jobs', $jobs);
     }
 }

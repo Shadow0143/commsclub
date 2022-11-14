@@ -10,6 +10,9 @@ Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name(
 Route::get('/event', [App\Http\Controllers\WelcomeController::class, 'events'])->name('events');
 Route::get('/blog', [App\Http\Controllers\WelcomeController::class, 'blogs'])->name('blogs');
 Route::get('/search-blogs', [App\Http\Controllers\WelcomeController::class, 'searchBlogs'])->name('searchBlogs');
+Route::get('/job', [App\Http\Controllers\WelcomeController::class, 'jobs'])->name('jobs');
+Route::get('/search-job', [App\Http\Controllers\WelcomeController::class, 'searchJobs'])->name('searchJobs');
+
 
 
 
@@ -42,3 +45,8 @@ Route::get('/create-blogs', [App\Http\Controllers\BlogController::class, 'create
 Route::post('/post-blogs', [App\Http\Controllers\BlogController::class, 'postBlogs'])->name('postBlogs');
 Route::get('/edit-blogs/{id}', [App\Http\Controllers\BlogController::class, 'editBlogs'])->name('editBlogs');
 Route::get('/delete-blogs', [App\Http\Controllers\BlogController::class, 'deleteBlogs'])->name('deleteBlogs');
+
+Route::get('/create-job', [App\Http\Controllers\JobController::class, 'createJobs'])->name('createJobs');
+Route::post('/store-job', [App\Http\Controllers\JobController::class, 'storeJobs'])->name('storeJobs');
+Route::get('/edit-job/{id}', [App\Http\Controllers\JobController::class, 'editJobs'])->name('editJobs');
+Route::get('/delete-job', [App\Http\Controllers\JobController::class, 'deleteJobs'])->name('deleteJobs');
