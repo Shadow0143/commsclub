@@ -12,6 +12,7 @@ Route::get('/blog', [App\Http\Controllers\WelcomeController::class, 'blogs'])->n
 Route::get('/search-blogs', [App\Http\Controllers\WelcomeController::class, 'searchBlogs'])->name('searchBlogs');
 Route::get('/job', [App\Http\Controllers\WelcomeController::class, 'jobs'])->name('jobs');
 Route::get('/search-job', [App\Http\Controllers\WelcomeController::class, 'searchJobs'])->name('searchJobs');
+Route::get('/job-details/{id}', [App\Http\Controllers\WelcomeController::class, 'jobDetails'])->name('jobDetails');
 
 
 
@@ -50,3 +51,4 @@ Route::get('/create-job', [App\Http\Controllers\JobController::class, 'createJob
 Route::post('/store-job', [App\Http\Controllers\JobController::class, 'storeJobs'])->name('storeJobs');
 Route::get('/edit-job/{id}', [App\Http\Controllers\JobController::class, 'editJobs'])->name('editJobs');
 Route::get('/delete-job', [App\Http\Controllers\JobController::class, 'deleteJobs'])->name('deleteJobs');
+Route::post('/store-applicant', [App\Http\Controllers\JobController::class, 'storeApplicant'])->name('storeApplicant');

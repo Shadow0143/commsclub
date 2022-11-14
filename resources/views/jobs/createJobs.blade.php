@@ -4,15 +4,7 @@
 <title>Create Jobs</title>
 @endsection
 @section('css')
-<style>
-    #min {
-        padding-left: 10px !important;
-    }
 
-    #add {
-        padding-left: 10px !important;
-    }
-</style>
 @endsection
 
 @section('content')
@@ -198,7 +190,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="inputfield55">
                                 <label>Jobs Description</label>
-                                <textarea name="description">  @if(!empty($jobs)) {!! $jobs->job_details!!}
+                                <textarea name="description" id="description">  @if(!empty($jobs)) {!! $jobs->job_details!!}
                                     @endif </textarea>
                                 <!-- <span class="error55"></span> -->
                             </div>
@@ -217,8 +209,16 @@
 @endsection
 
 @section('js')
-
+<script src="https://cdn.ckeditor.com/ckeditor5/35.3.1/classic/ckeditor.js"></script>
 <script type="text/javascript">
+    ClassicEditor.create( document.querySelector( '#description' ) )
+        .then( editor => {
+                console.log( editor );
+        } )
+        .catch( error => {
+                console.error( error );
+        } );
+
     $('.datepicker').datepicker({
         weekStart: 1,
         daysOfWeekHighlighted: "6,0",
@@ -228,12 +228,6 @@
     $('.datepicker').datepicker("setDate", new Date());
 </script>
 
-<script type="text/javascript">
-    $(function() {
-        $('#datetimepicker3').datetimepicker({
-            format: 'LT'
-        });
-    });
-</script>
+
 
 @endsection

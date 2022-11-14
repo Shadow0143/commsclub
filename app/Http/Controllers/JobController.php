@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\User;
 use App\Models\Jobs;
+use App\Models\Candidates;
 
 class JobController extends Controller
 {
@@ -96,5 +97,35 @@ class JobController extends Controller
     {
         $jobs                                                   = Jobs::find($id);
         return view('jobs.createJobs')->with('jobs', $jobs);
+    }
+
+    public function storeApplicant(Request $request)
+    {
+
+        $apply                                      = new Candidates();
+        $apply->jobs_id                             = $request->company_id;
+        $apply->candidate_name                      = $request->candidate_name;
+        $apply->candidate_email                     = $request->candidate_email;
+        $apply->candidate_contact                   = $request->candidate_contact;
+        $apply->current_location                    = $request->current_location;
+        $apply->working_as                          = $request->work_as;
+        $apply->last_company                        = $request->last_company;
+        $apply->total_work_experience               = $request->total_work_experience;
+        $apply->last_ctc                            = $request->last_ctc;
+        $apply->skills                              = $request->skills;
+        $apply->expected_salary                     = $request->expected_salary;
+        $apply->notice_period                       = $request->notice_period;
+        if (!empty($request->file('resume'))) {
+            $resumeFile                             = $request->file('resume');
+            $Imagename                              = $request->candidate_name . '-' . time() . '-resume' . '.' . $resumeFile->getClientOriginalExtension();
+            $result                                 = public_path('resumes');
+            $resumeFile->move($result, $Imagename);
+            $apply->resume                          = $Imagename;
+        }
+
+        $apply->save();
+
+        toast('Applied Succesfully', 'success');
+        return redirect()->route('jobs');
     }
 }

@@ -39,7 +39,7 @@ class WelcomeController extends Controller
 
     public function blogs()
     {
-        $blogs = Blogs::orderBy('id', 'desc')->get();
+        $blogs                                  = Blogs::orderBy('id', 'desc')->get();
         return view('resources.blogs')->with('blogs', $blogs);
     }
 
@@ -65,13 +65,19 @@ class WelcomeController extends Controller
 
     public function jobs()
     {
-        $jobs = Jobs::orderBy('id', 'desc')->get();
+        $jobs                                   = Jobs::orderBy('id', 'desc')->get();
         return view('jobs.job')->with('jobs', $jobs);
     }
 
     public function searchJobs(Request $request)
     {
-        $jobs = Jobs::where('job_title', 'like', '%' . $request->keyword . '%')->get();
+        $jobs                                   = Jobs::where('job_title', 'like', '%' . $request->keyword . '%')->get();
         return view('jobs.ajax_jobs')->with('jobs', $jobs);
+    }
+
+    public function jobDetails($id)
+    {
+        $jobdetails                             = Jobs::find($id);
+        return view('jobs.job_details')->with('jobdetails', $jobdetails);
     }
 }
