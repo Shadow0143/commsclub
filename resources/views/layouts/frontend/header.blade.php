@@ -78,7 +78,8 @@
                                 href="{{route('jobs')}}">Jobs</a></li>
                         <li><a href="#">Expert Database</a></li>
                         @guest
-                        <li data-toggle="modal" data-target="#joinmodal"><a href="#">Join Commsclub</a></li>
+                        <li data-toggle="modal" data-target="#joinmodal"><a href="javaScript:void(0);">Join
+                                Commsclub</a></li>
                         @endguest
                     </ul>
                 </div>
@@ -125,7 +126,8 @@
                             <li><a href="#">Faq</a></li>
                             <li><a href="#">Login</a></li>
                             @guest
-                            <li data-toggle="modal" data-target="#joinmodal"><a href="#">Join Commsclub</a></li>
+                            <li data-toggle="modal" data-target="#joinmodal"><a href="javaScript:void(0);">Join
+                                    Commsclub</a></li>
                             @endguest
                         </ul>
                     </div>
@@ -163,39 +165,55 @@
                         </p>
                         <span>Lorem ipsum dolor sit amet</span>
                     </div>
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+                        <div class="popbody458">
 
-                    <div class="popbody458">
+                            <div class="fieldrow">
+                                <div class="inputfield55">
+                                    <label>email id</label>
+                                    <input type="email" class=" @error('email') is-invalid @enderror" name="email"
+                                        value="{{ old('email') }}" required autocomplete="email" />
 
-                        <div class="fieldrow">
-                            <div class="inputfield55">
-                                <label>email id</label>
-                                <input type="text" name="">
-                                <!-- <span class="error55"></span> -->
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                    <!-- <span class="error55"></span> -->
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="fieldrow">
-                            <div class="inputfield55">
-                                <label>password</label>
-                                <input type="password" name="">
-                                <!-- <span class="error55"></span> -->
+                            <div class="fieldrow">
+                                <div class="inputfield55">
+                                    <label>password</label>
+                                    <input type="password" class=" @error('password') is-invalid @enderror"
+                                        name="password" required autocomplete="current-password" />
+
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                    <!-- <span class="error55"></span> -->
+                                </div>
                             </div>
+
+                            {{-- <div class="termcheck455">
+                                <label class="checkcontainer78">
+                                    <input type="checkbox">I confirm that i’ve read and agree to Privacy Policy
+                                    <span class="checkmark"></span>
+
+
+                                </label>
+                            </div> --}}
+
+                            <div class="btnbox55">
+                                <button class="btndflt58" type="submit" tabindex="0">LOGIN</button>
+                            </div>
+
                         </div>
-
-                        <div class="termcheck455">
-                            <label class="checkcontainer78">
-                                <input type="checkbox">I confirm that i’ve read and agree to Privacy Policy
-                                <span class="checkmark"></span>
-
-
-                            </label>
-                        </div>
-
-                        <div class="btnbox55">
-                            <a href="#" class="btndflt58" tabindex="0">login</a>
-                        </div>
-
-                    </div>
+                    </form>
 
 
 
