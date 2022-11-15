@@ -128,4 +128,24 @@ class JobController extends Controller
         toast('Applied Succesfully', 'success');
         return redirect()->route('jobs');
     }
+
+    public function viewApplicant($id)
+    {
+        $applicants = Candidates::where('jobs_id', $id)->orderby('id', 'desc')->where('status', 'accept')->get();
+        return view('jobs.applicants')->with('applicants', $applicants);
+    }
+
+    public function rejectApplicant(Request $request)
+    {
+        $reject = Candidates::find($request->id);
+        $reject->status = 'reject';
+        $reject->save();
+        return 1;
+    }
+
+    public function viewApplicantDetails(Request $request)
+    {
+        $candidates = Candidates::find($request->id);
+        return $candidates;
+    }
 }

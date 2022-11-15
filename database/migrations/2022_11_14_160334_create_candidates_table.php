@@ -28,6 +28,7 @@ class CreateCandidatesTable extends Migration
             $table->string('expected_salary')->nullable();
             $table->string('notice_period')->nullable();
             $table->string('resume');
+            $table->enum('status', ['accept', 'reject']);
             $table->timestamps();
             $table->foreign('jobs_id')->references('id')->on('jobs')->onDelete('cascade');
         });

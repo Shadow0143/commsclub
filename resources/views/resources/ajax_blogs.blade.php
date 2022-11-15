@@ -14,6 +14,7 @@
             <li class="active"><i class="fa fa-user"></i> {{$val->authname}}</li>
             <li><i class="fa fa-calendar"></i> {{date('M d, Y',strtotime($val->created_at))}}</li>
             <li><i class="fa fa-bookmark"></i> {{$val->tags}}</li>
+            <li><i class="fa fa-bookmark"></i> {{$val->categories}}</li>
         </ul>
 
         <h2>{{$val->title}}</h2>

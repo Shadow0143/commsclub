@@ -52,3 +52,6 @@ Route::post('/store-job', [App\Http\Controllers\JobController::class, 'storeJobs
 Route::get('/edit-job/{id}', [App\Http\Controllers\JobController::class, 'editJobs'])->name('editJobs');
 Route::get('/delete-job', [App\Http\Controllers\JobController::class, 'deleteJobs'])->name('deleteJobs');
 Route::post('/store-applicant', [App\Http\Controllers\JobController::class, 'storeApplicant'])->name('storeApplicant');
+Route::get('/view-applicant/{id}', [App\Http\Controllers\JobController::class, 'viewApplicant'])->name('viewApplicant');
+Route::get('/view-applicant-details', [App\Http\Controllers\JobController::class, 'viewApplicantDetails'])->name('viewApplicantDetails');
+Route::get('/reject-applicant', [App\Http\Controllers\JobController::class, 'rejectApplicant'])->name('rejectApplicant');

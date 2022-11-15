@@ -77,7 +77,9 @@
                         <li class=" @if(Route::current()->getName()=='jobs') active @endif"><a
                                 href="{{route('jobs')}}">Jobs</a></li>
                         <li><a href="#">Expert Database</a></li>
+                        @guest
                         <li data-toggle="modal" data-target="#joinmodal"><a href="#">Join Commsclub</a></li>
+                        @endguest
                     </ul>
                 </div>
 
@@ -122,7 +124,9 @@
                             <li><a href="#">Expert Database</a></li>
                             <li><a href="#">Faq</a></li>
                             <li><a href="#">Login</a></li>
+                            @guest
                             <li data-toggle="modal" data-target="#joinmodal"><a href="#">Join Commsclub</a></li>
+                            @endguest
                         </ul>
                     </div>
 

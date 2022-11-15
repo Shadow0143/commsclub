@@ -95,6 +95,8 @@
                     @guest
                     @else
                     @if(Auth::user()->role=='0')
+                    <a href="{{route('viewApplicant',['id'=>$val->id])}}" class="btndflt58" tabindex="0">Applicants</a>
+
                     <a href="{{route('editJobs',['id'=>$val->id])}}" title="Edit"><i class='fa fa-edit'></i></a>
                     &nbsp;
                     <a href="javaScript:void(0);" title="Delete" class="delete_job" data-id="{{$val->id}}"><i
