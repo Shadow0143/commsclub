@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
 Route::get('/event', [App\Http\Controllers\WelcomeController::class, 'events'])->name('events');
 Route::get('/blog', [App\Http\Controllers\WelcomeController::class, 'blogs'])->name('blogs');
-Route::get('/search-blogs', [App\Http\Controllers\WelcomeController::class, 'searchBlogs'])->name('searchBlogs');
+Route::get('/blogs-details/{id}', [App\Http\Controllers\WelcomeController::class, 'blogDetails'])->name('blogDetails');
+
 Route::get('/job', [App\Http\Controllers\WelcomeController::class, 'jobs'])->name('jobs');
 Route::get('/search-job', [App\Http\Controllers\WelcomeController::class, 'searchJobs'])->name('searchJobs');
 Route::get('/job-details/{id}', [App\Http\Controllers\WelcomeController::class, 'jobDetails'])->name('jobDetails');
@@ -43,6 +44,7 @@ Route::get('/edit-events/{id}', [App\Http\Controllers\EventController::class, 'e
 Route::get('/delete-events', [App\Http\Controllers\EventController::class, 'deleteEvents'])->name('deleteEvents');
 
 Route::get('/create-blogs', [App\Http\Controllers\BlogController::class, 'createBlogs'])->name('createBlogs');
+Route::get('/search-blogs', [App\Http\Controllers\WelcomeController::class, 'searchBlogs'])->name('searchBlogs');
 Route::post('/post-blogs', [App\Http\Controllers\BlogController::class, 'postBlogs'])->name('postBlogs');
 Route::get('/edit-blogs/{id}', [App\Http\Controllers\BlogController::class, 'editBlogs'])->name('editBlogs');
 Route::get('/delete-blogs', [App\Http\Controllers\BlogController::class, 'deleteBlogs'])->name('deleteBlogs');

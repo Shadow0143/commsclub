@@ -70,8 +70,16 @@
                     <ul>
                         <li class=" @if(Route::current()->getName()=='welcome') active @endif"><a
                                 href="{{route('welcome')}}">Home </a></li>
-                        <li class="@if(Route::current()->getName()=='blogs') active @endif"><a
-                                href="{{route('blogs')}}">Resources</a></li>
+                        <li class="@if(Route::current()->getName()=='blog') active @endif"><a href="#">Resources <i
+                                    class="fa fa-angle-down"></i></a>
+                            <div class="submenu55">
+                                <ul>
+                                    <li><a href="{{route('blogs')}}">Blogs</a></li>
+                                    <li><a href="#">menu 02</a></li>
+                                    <li><a href="#">menu 03</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li class=" @if(Route::current()->getName()=='events') active @endif"><a
                                 href="{{route('events')}}">Events</a></li>
                         <li class=" @if(Route::current()->getName()=='jobs') active @endif"><a
@@ -116,8 +124,20 @@
                         <ul>
                             <li class=" @if(Route::current()->getName()=='welcome') active @endif"><a
                                     href="{{route('welcome')}}">Home</a></li>
-                            <li class="@if(Route::current()->getName()=='blog') active @endif"><a
-                                    href="{{route('blogs')}}">Resources</a></li>
+
+
+                            <li class="@if(Route::current()->getName()=='blog') active @endif"><a href="#">Resources <i
+                                        class="fa fa-angle-down"></i></a>
+                                <div class="submenu55">
+                                    <ul>
+                                        <li><a href="{{route('blogs')}}">Blogs</a></li>
+                                        <li><a href="#">menu 02</a></li>
+                                        <li><a href="#">menu 03</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+
                             <li class=" @if(Route::current()->getName()=='events') active @endif"><a
                                     href="{{route('events')}}">Events</a></li>
                             <li class=" @if(Route::current()->getName()=='jobs') active @endif"><a

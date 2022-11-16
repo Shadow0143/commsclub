@@ -74,7 +74,7 @@
                                 {!! $val->description !!}
                             </p>
 
-                            <a href="#" class="blgrdmr45">Read More <img
+                            <a href="{{route('blogDetails',['id'=>$val->id])}}" class="blgrdmr45">Read More <img
                                     src="{{asset('assets/images/blog/arrow555.png')}}"></a>
                         </div>
                     </div>

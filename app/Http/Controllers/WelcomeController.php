@@ -80,4 +80,10 @@ class WelcomeController extends Controller
         $jobdetails                             = Jobs::find($id);
         return view('jobs.job_details')->with('jobdetails', $jobdetails);
     }
+
+    public function blogDetails($id)
+    {
+        $blogs = Blogs::find($id);
+        return view('resources.blog_details')->with('blogs', $blogs);
+    }
 }

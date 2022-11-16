@@ -22,8 +22,8 @@
             {!! $val->description !!}
         </p>
 
-        <a href="#" class="blgrdmr45">Read More <img src="{{asset('assets/images/blog/arrow555.png')}}"
-                alt="read-more"></a>
+        <a href="{{route('blogDetails',['id'=>$val->id])}}" class="blgrdmr45">Read More <img
+                src="{{asset('assets/images/blog/arrow555.png')}}" alt="read-more"></a>
     </div>
 </div>
 @endforeach

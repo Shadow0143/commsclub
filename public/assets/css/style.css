@@ -7,7 +7,7 @@
 @import url("reset.css");
 :focus {
     border: 0;
-    outline: 0
+    outline: 0;
 }
 
 img {
@@ -15,7 +15,7 @@ img {
 }
 
 a:hover {
-    text-decoration: none
+    text-decoration: none;
 }
 
 a {
@@ -24,18 +24,18 @@ a {
     -webkit-transition: all 0.2s linear 0s;
     transition: all 0.2s linear 0s;
     display: block;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .clears:after {
     clear: both;
     display: block;
-    content: '';
+    content: "";
 }
 
 body {
     background: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -104,7 +104,7 @@ body {
 }
 
 .hdtprt25 ul li::after {
-    content: '/';
+    content: "/";
     position: absolute;
     right: -19px;
     top: 43%;
@@ -143,7 +143,7 @@ body {
     height: 5px;
     background: #ff5960;
     border-radius: 20px;
-    content: '';
+    content: "";
     position: absolute;
     bottom: -6px;
     left: 0;
@@ -183,7 +183,7 @@ body {
 
 .banner_sec55 {
     background: url(../images/banner.jpg) no-repeat 0 0;
-    padding: 120px 0 300px
+    padding: 120px 0 300px;
 }
 
 .banner_sec55.innerbanner456 {
@@ -224,7 +224,7 @@ body {
     font-size: 18px;
     padding: 12px 26px;
     background: rgb(246, 54, 141);
-    background: linear-gradient(90deg, rgba(246, 54, 141, 1) 0%, rgba(245, 50, 125, 1) 50%, rgba(244, 35, 69, 1) 100%);
+    background: linear-gradient( 90deg, rgba(246, 54, 141, 1) 0%, rgba(245, 50, 125, 1) 50%, rgba(244, 35, 69, 1) 100%);
     -ms-transition: all 0.3s linear 0s;
     -moz-transition: all 0.3s linear 0s;
     -webkit-transition: all 0.3s linear 0s;
@@ -238,7 +238,7 @@ body {
     -webkit-transition: all 0.3s linear 0s;
     transition: all 0.3s linear 0s;
     background: rgb(244, 35, 69);
-    background: linear-gradient(90deg, rgba(244, 35, 69, 1) 0%, rgba(245, 50, 125, 1) 50%, rgba(245, 50, 125, 1) 100%);
+    background: linear-gradient( 90deg, rgba(244, 35, 69, 1) 0%, rgba(245, 50, 125, 1) 50%, rgba(245, 50, 125, 1) 100%);
     color: #fff;
 }
 
@@ -556,7 +556,7 @@ p {
 }
 
 .date45 {
-    background: linear-gradient(90deg, rgba(246, 54, 141, 1) 0%, rgba(245, 50, 125, 1) 50%, rgba(244, 35, 69, 1) 100%);
+    background: linear-gradient( 90deg, rgba(246, 54, 141, 1) 0%, rgba(245, 50, 125, 1) 50%, rgba(244, 35, 69, 1) 100%);
     padding: 12px;
     display: inline-block;
     margin-bottom: 30px;
@@ -646,7 +646,7 @@ p {
     border: 1px solid #f42754;
     width: 100px;
     height: 1px;
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1478,7 +1478,7 @@ p {
     bottom: -8px;
     left: 0;
     border-bottom: 3px solid #fc0841;
-    content: '';
+    content: "";
     width: 70px;
 }
 
@@ -1808,4 +1808,109 @@ p {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+
+/* menu */
+
+.submenu55 {
+    position: absolute;
+    top: auto;
+    left: 0;
+    opacity: 0;
+    padding: 15px;
+    -ms-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+    z-index: 99;
+    display: none;
+    width: 180px;
+    padding: 30px 0 0;
+}
+
+.submenu55 ul {
+    padding: 15px;
+    background: #fff;
+}
+
+.submenu55 ul li {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.submenu55 ul li a {
+    color: #06010b;
+    font-size: 16px;
+    display: block;
+}
+
+.menubox li:hover .submenu55 {
+    opacity: 1;
+    display: block;
+    -ms-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+}
+
+.menubox .submenu55 ul li::after {
+    width: 0;
+    height: 2px;
+    background: #ff5960;
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    -ms-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+}
+
+.menubox .submenu55 ul li:hover:after {
+    width: 120px;
+}
+
+.accordianNav a,
+.accordianNav h3 {
+    display: block;
+    line-height: 2.5em;
+    color: #757575;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    padding-left: 1em;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.accordianNav ul ul {
+    display: none;
+}
+
+.accordianNav .dropArrow:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid #757575;
+    border-right: 2px solid #757575;
+    float: right;
+    position: relative;
+    top: 12px;
+    right: 25px;
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+
+.accordianNav .dropArrow.active:after {
+    transform: rotate(-135deg);
+    border-color: #757575;
+}
+
+.blog_box565.blogdetls45 figure img {
+    width: 100%;
 }

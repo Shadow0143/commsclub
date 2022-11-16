@@ -115,7 +115,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="inputfield55">
                                 <label>Blog Description</label>
-                                <textarea name="description">  @if(!empty($blog)) {!! $blog->description!!}
+                                <textarea name="description" id="description">   @if(!empty($blog)) {!! $blog->description!!}
                                     @endif </textarea>
                                 <!-- <span class="error55"></span> -->
                             </div>
@@ -134,5 +134,14 @@
 @endsection
 
 @section('js')
-
+<script src="https://cdn.ckeditor.com/ckeditor5/35.3.1/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor.create( document.querySelector( '#description' ) )
+        .then( editor => {
+                console.log( editor );
+        } )
+        .catch( error => {
+                console.error( error );
+        } );
+</script>
 @endsection
