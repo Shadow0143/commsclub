@@ -83,7 +83,13 @@ class WelcomeController extends Controller
 
     public function blogDetails($id)
     {
-        $blogs = Blogs::find($id);
+        $blogs                                  = Blogs::find($id);
         return view('resources.blog_details')->with('blogs', $blogs);
+    }
+
+    public function eventDetails($id)
+    {
+        $event                                  = Events::find($id);
+        return view('events.event_details')->with('event', $event);
     }
 }

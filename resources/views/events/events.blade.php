@@ -15,6 +15,11 @@
         color: white;
         box-shadow: 0px 1px 30px blue
     }
+
+    #event_img {
+        width: 390px;
+        height: 225px ! important;
+    }
 </style>
 @endsection
 
@@ -54,14 +59,19 @@
                     @endif
                     @endguest
                     <div class="event_block45">
-                        <figure><img src="{{asset('events')}}/{{$item->image}}" alt="event_img"></figure>
+                        <figure><img src="{{asset('events')}}/{{$item->image}}" alt="event_img" id="event_img">
+                        </figure>
                         <div class="eveinfo45">
                             <div class="datebox45">
                                 <span class="day45">{{date('D',strtotime($item->created_at))}}</span>
                                 <span class="date55">{{date('m',strtotime($item->created_at))}}</span>
                             </div>
                             <div class="eve_right458">
-                                <h3>{{ucfirst($item->event_subject)}}</h3>
+                                <h3>
+                                    <a href="{{route('eventDetails',['id'=>$item->id])}}">
+                                        {{ucfirst($item->event_subject)}}
+                                    </a>
+                                </h3>
                                 <ul class="eve_tlist88">
                                     <li><i class="fa fa-calendar"></i>{{date('M d, Y',strtotime($item->start_date))}} -
                                         {{date('M d, Y',strtotime($item->end_date))}}</li>

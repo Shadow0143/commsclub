@@ -84,7 +84,7 @@
                             <div class="inputfield55">
                                 <label>event start date <span class="text-danger">*</span></label>
                                 <i class="fa fa-calendar date456"></i>
-                                <input data-date-format="dd/mm/yyyy" class="datepicker" name="start_date" required
+                                <input data-date-format="yyyy-mm-dd" class="datepicker" name="start_date" required
                                     @if(!empty($event)) value="{{$event->start_date}}" @endif>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                             <div class="inputfield55">
                                 <label>event end date<span class="text-danger">*</span></label>
                                 <i class="fa fa-calendar date456"></i>
-                                <input data-date-format="dd/mm/yyyy" class="datepicker" name="end_date" required
+                                <input data-date-format="yyyy-mm-dd" class="datepicker" name="end_date" required
                                     @if(!empty($event)) value="{{$event->end_date}}" @endif>
                             </div>
                         </div>
@@ -205,9 +205,17 @@
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="inputfield55">
                                 <label>event Description</label>
-                                <textarea name="description">  @if(!empty($event)) {!! $event->description!!}
+                                <textarea name="description" id="description" rows="5">  @if(!empty($event)) {!! $event->description!!}
                                     @endif </textarea>
                                 <!-- <span class="error55"></span> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="inputfield55">
+                                <label>Event Meeting Link</label>
+                                <input type="url" name="meeting_url" id="meeting_url" @if(!empty($event))
+                                    value="{{ $event->meeting_url}}" @endif>
+
                             </div>
                         </div>
                     </div>
@@ -224,7 +232,18 @@
 @endsection
 
 @section('js')
+<script src="https://cdn.ckeditor.com/ckeditor5/35.3.1/classic/ckeditor.js"></script>
+
 <script>
+    ClassicEditor.create( document.querySelector( '#description' ) )
+        .then( editor => {
+                console.log( editor );
+        } )
+        .catch( error => {
+                console.error( error );
+        } );
+
+
     $(document).ready(function() {
         var result =  $("#result").val();
         

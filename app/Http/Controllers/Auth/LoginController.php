@@ -7,7 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
-
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LoginController extends Controller
 {

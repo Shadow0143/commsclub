@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 // });
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
 Route::get('/event', [App\Http\Controllers\WelcomeController::class, 'events'])->name('events');
+Route::get('/event-details/{id}', [App\Http\Controllers\WelcomeController::class, 'eventDetails'])->name('eventDetails');
 Route::get('/blog', [App\Http\Controllers\WelcomeController::class, 'blogs'])->name('blogs');
 Route::get('/blogs-details/{id}', [App\Http\Controllers\WelcomeController::class, 'blogDetails'])->name('blogDetails');
 

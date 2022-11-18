@@ -23,9 +23,8 @@ class EventController extends Controller
 
     public function postEvents(Request $request)
     {
-        // dd($request->all());
         if (!empty($request->id)) {
-            $event                              = Events::find($request->id);
+            $event                                      = Events::find($request->id);
             $event->first_name                          = $request->first_name;
             $event->last_name                           = $request->last_name;
             $event->email                               = $request->email;
@@ -42,6 +41,7 @@ class EventController extends Controller
             $event->pincode                             = $request->pincode;
             $event->event_subject                       = $request->event_subject;
             $event->description                         = $request->description;
+            $event->meeting_url                         = $request->meeting_url;
             if (!empty($request->file('image'))) {
                 $eventImage                             = $request->file('image');
                 $Imagename                              = time() . '-eventImage' . '.' . $eventImage->getClientOriginalExtension();
@@ -70,6 +70,7 @@ class EventController extends Controller
             $event->pincode                             = $request->pincode;
             $event->event_subject                       = $request->event_subject;
             $event->description                         = $request->description;
+            $event->meeting_url                         = $request->meeting_url;
             if (!empty($request->file('image'))) {
                 $eventImage                             = $request->file('image');
                 $Imagename                              = time() . '-eventImage' . '.' . $eventImage->getClientOriginalExtension();

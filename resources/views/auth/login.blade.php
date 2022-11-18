@@ -88,10 +88,10 @@
     <div class="container">
         <div class="login_cont45">
             <div class="logheader45">
-                <a href="#" class="logo"><img src="{{asset('assets/images/logo.png')}}"></a>
+                <a href="{{route('welcome')}}" class="logo"><img src="{{asset('assets/images/logo.png')}}"></a>
                 <ul class="logmenu45">
                     <li><a href="{{route('welcome')}}">Home</a></li>
-                    <li><a href="#">Join</a></li>
+                    <li><a href="{{route('register')}}">Register</a></li>
                 </ul>
             </div>
             <div class="logmidcont45">

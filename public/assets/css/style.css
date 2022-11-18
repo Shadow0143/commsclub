@@ -1914,3 +1914,40 @@ p {
 .blog_box565.blogdetls45 figure img {
     width: 100%;
 }
+
+
+/* event details */
+
+.event_block45.evedetls8898 figure img {
+    width: 100%;
+}
+
+.event_block45.evedetls8898 .eve_right458 h3 {
+    font-size: 44px;
+}
+
+.event_block45.evedetls8898 .eve_tlist88 li {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.eve_tlist88 label {
+    display: block;
+    color: #000;
+}
+
+.event_block45.evedetls8898 .eve_tlist88 p {
+    font-size: 16px;
+}
+
+.event_block45.evedetls8898 .eve_tlist88 a {
+    font-size: 16px;
+    display: block;
+    color: #190438;
+}
+
+.event_block45.evedetls8898 {
+    max-width: 1020px;
+    margin: 0 auto;
+    box-shadow: none;
+}

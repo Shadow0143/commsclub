@@ -32,6 +32,7 @@ class CreateEventsTable extends Migration
             $table->integer('pincode');
             $table->longText('event_subject');
             $table->longText('descriptoin')->nullable();
+            $table->longText('meeting_url')->nullable();
             $table->enum('status', ['active', 'inactive']);
             $table->timestamps();
         });
